@@ -1,13 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom';
-import router from './routes/Routes'
-import "./Globalstyle.scss";
-import "./style.css"
 
-createRoot(document.getElementById('root')).render(
+import router from './routes/Routes'
+
+import "./assets/styles/main.scss";
+
+createRoot(document.getElementById('root')!).render(
 
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
+  </StrictMode>
+
 )

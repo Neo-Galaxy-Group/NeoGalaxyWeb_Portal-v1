@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
-const GlobalNavbar = () => {
+import "./Navbar.scss"
+
+const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -26,4 +28,4 @@ const GlobalNavbar = () => {
   );
 };
 
-export default GlobalNavbar;
+export default Navbar;

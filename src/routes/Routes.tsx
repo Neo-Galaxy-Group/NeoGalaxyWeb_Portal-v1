@@ -1,12 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 import { createBrowserRouter } from 'react-router-dom';
-import Home from '../Home';
+
+import PageTemplate from '../PageTemplate';
+
+import Home from "../pages/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />, // Questo farà da Layout (deve contenere <Outlet />)
+    element: <PageTemplate content={Home}/>, // Questo farà da Layout (deve contenere <Outlet />)
     /*
     children: [
       {

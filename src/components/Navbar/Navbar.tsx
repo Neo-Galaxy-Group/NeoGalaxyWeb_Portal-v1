@@ -1,9 +1,63 @@
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { Component } from "react";
 
-import "./Navbar.scss"
+import "./Navbar.scss";
 
-const Navbar = () => {
+interface IState {
+  isOpen: boolean;
+}
+
+class Navbar extends Component<{}, IState> {
+  constructor(props: {}) {
+    super(props);
+
+    this.state = {
+      isOpen: false,
+    };
+
+    this.toggleDropdownMenu = this.toggleDropdownMenu.bind(this);
+  }
+
+  toggleDropdownMenu() {
+    this.setState({ isOpen: !this.state.isOpen });
+  }
+
+  render() {
+    const { isOpen } = this.state;
+    return (
+      <nav className="Navbar-nav">
+        <ul className="Navbar-nav-list">
+          <li className="Navbar-nav-element">
+            <a  className="Navbar-nav-element-home" href="/">Home</a>
+          </li>
+          <li className="Navbar-nav-element">
+            <div className="Navbar-nav-element-menu">
+              <span onClick={this.toggleDropdownMenu}>
+                I nostri progetti {isOpen ? "▲" : "▼"}
+              </span>
+
+              {isOpen && (
+                <ul>
+                  <li>
+                    <a href="">
+                      Community
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      Software House
+                    </a>
+                  </li>
+                </ul>
+              )}
+            </div>
+          </li>
+        </ul>
+      </nav>
+    );
+  }
+}
+
+/*const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -27,5 +81,6 @@ const Navbar = () => {
     </section>
   );
 };
+*/
 
 export default Navbar;

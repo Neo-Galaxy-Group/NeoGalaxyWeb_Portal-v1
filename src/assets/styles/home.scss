@@ -1,0 +1,25 @@
+.home-container {
+  place-content: center;
+  place-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.home-logo {
+  animation: pulsazione 1.5s infinite ease-in-out;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  transition: filter 0.3s ease;
+  width: 30%;
+}
+
+@keyframes pulsazione {
+  0% {
+    transform: scale(1); /* Dimensione originale */
+  }
+  50% {
+    transform: scale(1.05); /* Ingrandimento del 15% */
+  }
+  100% {
+    transform: scale(1); /* Ritorno alla dimensione originale */
+  }
+}

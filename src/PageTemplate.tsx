@@ -2,7 +2,7 @@ import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
 
 interface IPageTemplate {
-    content: React.ComponentType;
+    content: React.ReactNode;
 }
 
 const PageTemplate = ({content}: IPageTemplate) => {

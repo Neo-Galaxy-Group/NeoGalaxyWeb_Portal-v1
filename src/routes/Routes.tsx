@@ -7,7 +7,7 @@ import Home from "../pages/Home";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <PageTemplate content={Home}/>, // Questo farà da Layout (deve contenere <Outlet />)
+    element: <PageTemplate content={<Home />}/>, // Questo farà da Layout (deve contenere <Outlet />)
     /*
     children: [
       {

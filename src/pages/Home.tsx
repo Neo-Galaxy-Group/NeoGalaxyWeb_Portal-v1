@@ -1,5 +1,7 @@
 import imgHome from "../assets/img/neogalaxylogo.png"
 
+import "../assets/styles/home.scss"
+
 function Home() {
   return (
     <div className="home-container">

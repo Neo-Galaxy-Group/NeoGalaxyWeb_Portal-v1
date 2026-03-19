@@ -1,0 +1,51 @@
+.Navbar-nav, .Navbar-nav-list {
+  height: 100%;
+  width: 100%;
+}
+
+.Navbar-nav-list {
+  align-items: center;
+  display: flex;
+  color: rgb(216, 213, 213);
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  list-style-type: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.Navbar-nav-element {
+  align-items: center;
+  color: rgb(216, 213, 213);
+  height: 100%;
+  justify-items: center;
+  text-align: center;
+  text-decoration: none;
+  width: 20%;
+
+  .Navbar-nav-element-home {
+    color: rgb(216, 213, 213);
+    display: block;
+    font-size: 20px;
+    height: 100%;
+    place-content: center;
+    place-items: center;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  .Navbar-nav-element-menu {
+    display: block;
+    font-size: 20px;
+    height: 100%;
+    place-content: center;
+    place-items: center;
+    width: 100%;
+  }
+
+  .Navbar-nav-element-home:hover , .Navbar-nav-element-menu:hover {
+    background-color: rgba(45, 45, 65, 0.65);
+  }
+
+}

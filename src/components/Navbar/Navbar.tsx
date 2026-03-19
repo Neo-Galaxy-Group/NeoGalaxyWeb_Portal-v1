@@ -30,10 +30,8 @@ class Navbar extends Component<{}, IState> {
             <a  className="Navbar-nav-element-home" href="/">Home</a>
           </li>
           <li className="Navbar-nav-element">
-            <div className="Navbar-nav-element-menu">
-              <span onClick={this.toggleDropdownMenu}>
-                I nostri progetti {isOpen ? "▲" : "▼"}
-              </span>
+            <div className="Navbar-nav-element-menu" onClick={this.toggleDropdownMenu}>
+              I nostri progetti {isOpen ? "↑" : "↓"}
 
               {isOpen && (
                 <ul>

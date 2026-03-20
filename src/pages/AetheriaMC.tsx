@@ -6,8 +6,8 @@ function Home() {
   return (
     <div className="home-container">
       <img src={imgHome} alt="Image not available" className="home-logo" />
-      <br /> 
-      <span className="tmpText">HOME PAGE</span>
+      <br />
+      <span className="tmpText">AETHERIAMC PAGE</span>
 
     </div>
   );

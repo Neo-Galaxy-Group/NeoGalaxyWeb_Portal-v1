@@ -7,47 +7,59 @@ interface IState {
 }
 
 class Navbar extends Component<{}, IState> {
+
   constructor(props: {}) {
     super(props);
 
     this.state = {
-      isOpen: false,
+      isOpen: false
     };
 
-    this.toggleDropdownMenu = this.toggleDropdownMenu.bind(this);
+    this.setMenu = this.setMenu.bind(this);
   }
 
-  toggleDropdownMenu() {
-    this.setState({ isOpen: !this.state.isOpen });
+  componentDidMount(): void {
+    this.setMenu(false);
+  }
+
+  componentWillUnmount(): void {
+    this.setMenu(false);
+  }
+
+  setMenu(open: boolean)
+  {
+    this.setState({ isOpen: open });
   }
 
   render() {
     const { isOpen } = this.state;
+
     return (
       <nav className="Navbar-nav">
         <ul className="Navbar-nav-list">
           <li className="Navbar-nav-element">
-            <a  className="Navbar-nav-element-home" href="/">Home</a>
+            <a className="Navbar-nav-element-home" href="/">
+              Home
+            </a>
           </li>
           <li className="Navbar-nav-element">
-            <div className="Navbar-nav-element-menu" onClick={this.toggleDropdownMenu}>
+            <div className="Navbar-nav-element-menu" onMouseEnter={()=>this.setMenu(true)} onMouseLeave={()=>this.setMenu(false)}>
               I nostri progetti {isOpen ? "↑" : "↓"}
-
-              {isOpen && (
-                <ul>
-                  <li>
-                    <a href="">
-                      Community
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Software House
-                    </a>
-                  </li>
-                </ul>
-              )}
             </div>
+            {isOpen && (
+              <ul className="Navbar-nav-ProjectSelection" onMouseEnter={()=>this.setMenu(true)} onMouseLeave={()=>this.setMenu(false)}>
+                <li className="Navbar-nav-ProjectSelection-element">
+                  <a href="/projects/community" className="Navbar-nav-ProjectSelection-element-a">
+                    Neo Galaxy Community
+                  </a>
+                </li>
+                <li className="Navbar-nav-ProjectSelection-element">
+                  <a href="/projects/softwarehouse" className="Navbar-nav-ProjectSelection-element-a">
+                    Neo Galaxy Software House
+                  </a>
+                </li>
+              </ul>
+            )}
           </li>
         </ul>
       </nav>

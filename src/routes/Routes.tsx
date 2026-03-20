@@ -1,36 +1,29 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom'
 
-import PageTemplate from '../PageTemplate';
+import PageTemplate from '../PageTemplate'
+import Home from "../pages/Home"
 
-import Home from "../pages/Home";
+import AetheriaMC from "../pages/AetheriaMC"
+import Community from "../pages/Community"
+import SoftwareHouse from "../pages/SoftwareHouse"
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <PageTemplate content={<Home />}/>, // Questo farà da Layout (deve contenere <Outlet />)
-    /*
-    children: [
-      {
-        index: true, // Rotta di default quando sei su "/"
-        element: <Home />,
-      },
-      {
-        path: "dashboard",
-        element: <Dashboard />,
-      },
-    ],
-    */
-  },
-  /*
-  {
-    path: "/404",
-    element: <NotFound />,
+    element: <PageTemplate content={<Home />}/>
   },
   {
-    path: "*",
-    element: <Navigate to="/404" replace />,
+    path: "/projects/aetheriamc",
+    element: <PageTemplate content={<AetheriaMC />}/>
   },
-  */
+  {
+    path: "/projects/community",
+    element: <PageTemplate content={<Community />}/>
+  },
+  {
+    path: "/projects/softwarehouse",
+    element: <PageTemplate content={<SoftwareHouse />}/>
+  },
 ]);
 
 export default router;

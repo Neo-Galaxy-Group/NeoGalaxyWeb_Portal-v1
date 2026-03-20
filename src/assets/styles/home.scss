@@ -1,6 +1,6 @@
 .home-container {
-  place-content: center;
-  place-items: center;
+  display: block;
+  min-height: 80vh;
   text-align: center;
   width: 100%;
 }
@@ -14,12 +14,17 @@
 
 @keyframes pulsazione {
   0% {
-    transform: scale(1); /* Dimensione originale */
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.05); /* Ingrandimento del 15% */
+    transform: scale(1.05);
   }
   100% {
-    transform: scale(1); /* Ritorno alla dimensione originale */
+    transform: scale(1);
   }
+}
+
+.tmpText {
+  color: rgb(216, 213, 213);
+  font-size: 36px;
 }

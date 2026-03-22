@@ -1,5 +1,4 @@
 import { Component } from "react";
-
 import "./Navbar.scss";
 
 interface IState {
@@ -50,12 +49,12 @@ class Navbar extends Component<{}, IState> {
               <ul className="Navbar-nav-ProjectSelection" onMouseEnter={()=>this.setMenu(true)} onMouseLeave={()=>this.setMenu(false)}>
                 <li className="Navbar-nav-ProjectSelection-element">
                   <a href="/projects/community" className="Navbar-nav-ProjectSelection-element-a">
-                    Neo Galaxy Community
+                    Community
                   </a>
                 </li>
                 <li className="Navbar-nav-ProjectSelection-element">
                   <a href="/projects/softwarehouse" className="Navbar-nav-ProjectSelection-element-a">
-                    Neo Galaxy Software House
+                    Software House
                   </a>
                 </li>
               </ul>
@@ -66,31 +65,5 @@ class Navbar extends Component<{}, IState> {
     );
   }
 }
-
-/*const Navbar = () => {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <section id="navbar">
-      <NavLink to="/">Home</NavLink>
-
-      <div
-        className="dropdown"
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}
-      >
-        <span className="dropdown-title">I nostri progetti</span>
-
-        {open && (
-          <div className="dropdown-menu">
-            <NavLink to="/community">Community</NavLink>
-            <NavLink to="/softerhouse">Softerhouse</NavLink>
-          </div>
-        )}
-      </div>
-    </section>
-  );
-};
-*/
 
 export default Navbar;

@@ -6,10 +6,13 @@
 }
 
 .home-logo {
-  animation: pulsazione 1.5s infinite ease-in-out;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-  transition: filter 0.3s ease;
-  width: 30%;
+  width: 40%;
+
+  &:hover {
+    animation: pulsazione 1.5s infinite ease-in-out;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    transition: filter 0.3s ease;
+  }
 }
 
 @keyframes pulsazione {
@@ -26,5 +29,5 @@
 
 .tmpText {
   color: rgb(216, 213, 213);
-  font-size: 36px;
+  font-size: 5rem;
 }

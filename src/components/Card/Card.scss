@@ -1,0 +1,57 @@
+hr {
+        border-color: rgba(141, 141, 153, 0.8);
+        width: 80%;
+    }
+
+.Card-div {
+    align-items: center;
+    background-color: rgba(35, 35, 50, 0.80);
+    border-color: rgba(45, 45, 65, 0.6);
+    border-radius: 6px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: flex-start;
+    text-align: center;
+    width: 50%;
+}
+
+.Card-div-header {
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+    place-content: center;
+    place-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.Card-div-header-image {
+  max-width: 300px;
+  width: 8em;
+
+  &:hover {
+    animation: pulsazione 1.5s infinite ease-in-out;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    transition: filter 0.3s ease;
+  }
+}
+
+@keyframes pulsazione {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.Card-div-header-text {
+  color: rgb(216, 213, 213);
+  font-size: 1.50rem;
+  width: 70%;
+}

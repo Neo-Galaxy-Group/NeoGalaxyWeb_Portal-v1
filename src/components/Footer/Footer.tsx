@@ -1,21 +1,20 @@
-import "./Footer.scss"
+import "./Footer.scss";
 
-function Footer()
-{
-    return (
-        <footer>
-            <div className="Footer-Left-Elements">
-                Voce 1<br />
-                Voce 2<br />
-                Voce 3<br />
-            </div>
-            <div className="Footer-Right-Elements">
-                Voce 1<br />
-                Voce 2<br />
-                Voce 3<br />
-            </div>
-        </footer>
-    )
+function Footer() {
+  const currentYear = new Date().getFullYear();
+  const creationYear = 2026;
+
+  return (
+    <footer>
+      <div className="Footer-Top">
+        <div className="Footer-TopLeft">
+        </div>
+        <div className="Footer-TopRight">
+        </div>
+      </div>
+      <div className="Footer-Bottom">© Copyright {creationYear} {creationYear !== currentYear && ` - ${currentYear}`}</div>
+    </footer>
+  );
 }
 
 export default Footer;

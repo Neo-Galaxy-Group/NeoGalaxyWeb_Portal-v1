@@ -1,16 +1,24 @@
+import Card from "./components/Card/Card"
 import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
 
+import "./assets/styles/pagetemplate.scss"
+
 interface IPageTemplate {
-    content: React.ReactNode;
+    children: React.ReactNode;
+    imgSrc: string;
+    text: string;
 }
 
-const PageTemplate = ({content}: IPageTemplate) => {
-
+const PageTemplate = ({children, imgSrc, text}: IPageTemplate) => {
     return(
         <>
             <Header />
-            {content}
+            <div className="page-container">
+                <Card imgSrc={imgSrc} text={text}>
+                    {children}
+                </Card>
+            </div>
             <Footer />
         </>
     )

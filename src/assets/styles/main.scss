@@ -3,14 +3,12 @@
   padding: 0;
 }
 
-.indexRoot {
-  height: 100vh;
+html, body, #root {
+  height: 100%;
   width: 100%;
 }
 
 body {
-  height: 100vh;
-  width: 100%;
   /*
     BACKGROUND
   */

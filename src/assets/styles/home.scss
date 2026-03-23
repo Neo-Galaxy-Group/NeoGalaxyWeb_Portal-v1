@@ -1,12 +1,13 @@
 .home-container {
   display: block;
-  min-height: 80vh;
+  min-height: 80%;
   text-align: center;
   width: 100%;
 }
 
 .home-logo {
-  width: 40%;
+  max-width: 300px;
+  width: 20%;
 
   &:hover {
     animation: pulsazione 1.5s infinite ease-in-out;

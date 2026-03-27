@@ -6,10 +6,8 @@ function Footer() {
 
   return (
     <footer>
-      <div className="Footer-Bottom">
-        © Copyright {creationYear}{" "}
-        {creationYear !== currentYear && ` - ${currentYear}`}
-      </div>
+      © Copyright {creationYear}{" "}
+      {creationYear !== currentYear && ` - ${currentYear}`}
     </footer>
   );
 }

@@ -1,37 +1,11 @@
+@use "../../assets/styles/variables" as vars;
+
 footer {
   background-color: rgba(35, 35, 50, 0.4);
-  color: rgb(216, 213, 213);
+  color: vars.$textcolor;
   height: 10%;
-  width: 100%;
-}
-
-.Footer-Bottom,
-.Footer-Top,
-.Footer-TopLeft,
-.Footer-TopRight {
-  color: rgb(162, 155, 155);
   place-content: center;
   place-items: center;
   text-align: center;
-}
-
-.Footer-Top,
-.Footer-Bottom {
   width: 100%;
-}
-
-.Footer-Top {
-  display: flex;
-  flex-direction: row;
-  height: 80%;
-}
-
-.Footer-Bottom {
-  height: 100%;
-}
-
-.Footer-TopLeft,
-.Footer-TopRight {
-  height: 100%;
-  width: 50%;
 }

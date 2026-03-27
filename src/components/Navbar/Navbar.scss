@@ -1,3 +1,5 @@
+@use "../../assets/styles/variables" as vars;
+
 .Navbar-nav,
 .Navbar-nav-list {
   height: 100%;
@@ -7,7 +9,7 @@
 .Navbar-nav-list {
   align-items: center;
   display: flex;
-  color: rgb(216, 213, 213);
+  color: vars.$textcolor;
   flex-direction: row;
   justify-content: center;
   justify-items: center;
@@ -18,7 +20,7 @@
 
 .Navbar-nav-element {
   align-items: center;
-  color: rgb(216, 213, 213);
+  color: vars.$textcolor;
   height: 100%;
   justify-items: center;
   text-align: center;
@@ -27,7 +29,7 @@
 
   .Navbar-nav-element-home,
   .Navbar-nav-element-menu {
-    color: rgb(216, 213, 213);
+    color: vars.$textcolor;
     display: block;
     font-size: 1.3rem;
     height: 100%;
@@ -73,7 +75,7 @@
   }
 
   .Navbar-nav-ProjectSelection-element-a {
-    color: rgb(216, 213, 213);
+    color: vars.$textcolor;
     font-size: 1.25rem;
     height: 100%;
     text-decoration: none;

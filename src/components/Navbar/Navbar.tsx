@@ -43,7 +43,9 @@ class Navbar extends Component<{}, IState> {
           </li>
           <li className="Navbar-nav-list-element">
             <div className="Navbar-nav-button" onMouseEnter={() => this.setMenu(true)} onMouseLeave={() => this.setMenu(false)}>
-              I nostri progetti {isOpen == "block" ? "↑" : "↓"}
+              <p className="Navbar-nav-button-link">
+                I nostri progetti {isOpen == "block" ? "↑" : "↓"}
+              </p>
             </div>
             <ul className="Navbar-nav-list Navbar-dropdown" style={{ display: isOpen }} onMouseEnter={() => this.setMenu(true)} onMouseLeave={() => this.setMenu(false)}>
               <li className="Navbar-nav-list-element">

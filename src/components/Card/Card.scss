@@ -6,34 +6,42 @@ hr {
 }
 
 .Card-div {
-  align-items: center;
   background-color: rgba(35, 35, 50, 0.5);
   border-color: rgba(45, 45, 65, 0.5);
   border-radius: 6px;
   border-style: solid;
   color: $textcolor;
-  //height: 80%;
-  justify-content: flex-start;
+  justify-items: center;
   text-align: center;
   width: 50%;
-  @include flex-column;
 }
 
 .Card-div-header {
-  height: 30%;
-  width: 100%;
-  @include align-center;
-  @include flex-row;
+  align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2,1fr);
+  justify-items: center;
+
+  .Card-div-header-image {
+    width: 8rem;
+
+    &:hover {
+      animation: pulsazione 1.5s infinite ease-in-out;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+      transition: filter 0.3s ease;
+    }
+  }
+
+  .Card-div-header-text {
+    font-size: 1.8rem;
+  }
+
 }
 
-.Card-div-header-image {
-  max-width: 300px;
-  width: 8em;
-
-  &:hover {
-    animation: pulsazione 1.5s infinite ease-in-out;
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-    transition: filter 0.3s ease;
+@media (max-width: 550px) {
+  .Card-div {
+    width: 90%;
   }
 }
 
@@ -47,10 +55,4 @@ hr {
   100% {
     transform: scale(1);
   }
-}
-
-.Card-div-header-text {
-  color: $textcolor;
-  font-size: 1.5rem;
-  width: 70%;
 }

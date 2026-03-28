@@ -1,4 +1,4 @@
-@use "../../assets/styles/variables" as vars;
+@use "../../assets/styles/index";
 
 .Navbar-nav,
 .Navbar-nav-list {
@@ -8,19 +8,18 @@
 
 .Navbar-nav-list {
   align-items: center;
-  display: flex;
-  color: vars.$textcolor;
-  flex-direction: row;
+  color: $textcolor;
   justify-content: center;
   justify-items: center;
   list-style-type: none;
   text-align: center;
   vertical-align: middle;
+  @include flex-row;
 }
 
 .Navbar-nav-element {
   align-items: center;
-  color: vars.$textcolor;
+  color: $textcolor;
   height: 100%;
   justify-items: center;
   text-align: center;
@@ -29,14 +28,13 @@
 
   .Navbar-nav-element-home,
   .Navbar-nav-element-menu {
-    color: vars.$textcolor;
+    color: $textcolor;
     display: block;
     font-size: 1.3rem;
     height: 100%;
-    place-content: center;
-    place-items: center;
     text-decoration: none;
     width: 100%;
+    @include align-center;
 
     &:hover {
       background-color: rgba(45, 45, 65, 0.65);
@@ -64,10 +62,8 @@
   .Navbar-nav-ProjectSelection-element,
   .Navbar-nav-ProjectSelection-element-a {
     display: block;
-    place-content: center;
-    place-items: center;
-    text-align: center;
     width: 100%;
+    @include align-center;
   }
 
   .Navbar-nav-ProjectSelection-element {
@@ -75,7 +71,7 @@
   }
 
   .Navbar-nav-ProjectSelection-element-a {
-    color: vars.$textcolor;
+    color: $textcolor;
     font-size: 1.25rem;
     height: 100%;
     text-decoration: none;

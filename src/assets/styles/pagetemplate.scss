@@ -1,8 +1,8 @@
+@use "./index";
+
 .page-container {
   display: block;
   height: 100%;
-  place-content: center;
-  place-items: center;
-  text-align: center;
   width: 100%;
+  @include align-center;
 }

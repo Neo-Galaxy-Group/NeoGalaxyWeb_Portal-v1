@@ -1,0 +1,26 @@
+@use "../../assets/styles/index" as *;
+
+.Home-container {
+  line-height: 1.6;
+  color: $textcolor;
+  height: fit-content;
+  padding: 2rem;
+  width: 80%;
+  @include flex-column;
+
+  &-text-intro,
+  &-text-description,
+  &-text-ecosystem,
+  &-text-link {
+    font-size: 1.4rem;
+  }
+
+  &-text-description {
+    opacity: 0.9;
+  }
+
+  &-text-link {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}

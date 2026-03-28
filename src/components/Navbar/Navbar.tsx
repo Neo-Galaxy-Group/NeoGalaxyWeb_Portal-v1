@@ -6,12 +6,11 @@ interface IState {
 }
 
 class Navbar extends Component<{}, IState> {
-
   constructor(props: {}) {
     super(props);
 
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
 
     this.setMenu = this.setMenu.bind(this);
@@ -25,40 +24,43 @@ class Navbar extends Component<{}, IState> {
     this.setMenu(false);
   }
 
-  setMenu(open: boolean)
-  {
+  setMenu(open: boolean) {
     this.setState({ isOpen: open });
   }
 
   render() {
-    const { isOpen } = this.state;
+    const isOpen = this.state.isOpen ? "block" : "none";
 
     return (
       <nav className="Navbar-nav">
         <ul className="Navbar-nav-list">
-          <li className="Navbar-nav-element">
-            <a className="Navbar-nav-element-home" href="/">
-              Home
-            </a>
+          <li className="Navbar-nav-list-element">
+            <div className="Navbar-nav-button">
+              <a className="Navbar-nav-button-link" href="/">
+                Home
+              </a>
+            </div> 
           </li>
-          <li className="Navbar-nav-element">
-            <div className="Navbar-nav-element-menu" onMouseEnter={()=>this.setMenu(true)} onMouseLeave={()=>this.setMenu(false)}>
-              I nostri progetti {isOpen ? "↑" : "↓"}
+          <li className="Navbar-nav-list-element">
+            <div className="Navbar-nav-button" onMouseEnter={() => this.setMenu(true)} onMouseLeave={() => this.setMenu(false)}>
+              I nostri progetti {isOpen == "block" ? "↑" : "↓"}
             </div>
-            {isOpen && (
-              <ul className="Navbar-nav-ProjectSelection" onMouseEnter={()=>this.setMenu(true)} onMouseLeave={()=>this.setMenu(false)}>
-                <li className="Navbar-nav-ProjectSelection-element">
-                  <a href="/projects/community" className="Navbar-nav-ProjectSelection-element-a">
+            <ul className="Navbar-nav-list Navbar-dropdown" style={{ display: isOpen }} onMouseEnter={() => this.setMenu(true)} onMouseLeave={() => this.setMenu(false)}>
+              <li className="Navbar-nav-list-element">
+                <div className="Navbar-nav-button">
+                  <a href="/projects/community" className="Navbar-nav-button-link">
                     Community
                   </a>
-                </li>
-                <li className="Navbar-nav-ProjectSelection-element">
-                  <a href="/projects/softwarehouse" className="Navbar-nav-ProjectSelection-element-a">
+                </div>
+              </li>
+              <li className="Navbar-nav-list-element">
+                <div className="Navbar-nav-button">
+                  <a href="/projects/softwarehouse" className="Navbar-nav-button-link">
                     Software House
                   </a>
-                </li>
-              </ul>
-            )}
+                </div>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>

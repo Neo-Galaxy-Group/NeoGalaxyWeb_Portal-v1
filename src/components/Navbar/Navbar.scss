@@ -1,83 +1,50 @@
 @use "../../assets/styles/index" as *;
 
-.Navbar-nav,
-.Navbar-nav-list {
-  height: 100%;
-  width: 100%;
+.Navbar-nav {
+  display: flex;
+  justify-content: center;
 }
 
 .Navbar-nav-list {
-  align-items: center;
-  color: $textcolor;
-  justify-content: center;
-  justify-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr);
   list-style-type: none;
   text-align: center;
-  vertical-align: middle;
-  @include flex-row;
 }
 
-.Navbar-nav-element {
-  align-items: center;
+.Navbar-nav-list-element {
   color: $textcolor;
-  height: 100%;
-  justify-items: center;
-  text-align: center;
-  text-decoration: none;
-  width: 20%;
 
-  .Navbar-nav-element-home,
-  .Navbar-nav-element-menu {
-    color: $textcolor;
-    display: block;
+  .Navbar-nav-button {
     font-size: 1.3rem;
-    height: 100%;
-    text-decoration: none;
-    width: 100%;
-    @include align-center;
+    padding: 1.8rem;
 
     &:hover {
       background-color: rgba(45, 45, 65, 0.65);
     }
   }
 
-  .Navbar-nav-element-menu {
-    font-size: 1.25rem;
-    position: relative;
-  }
-
-  .Navbar-nav-ProjectSelection {
-    background-color: rgba(35, 35, 50);
-    border-color: rgba(45, 45, 65, 0.6);
-    border-radius: 4px;
-    border-style: groove;
-    height: 120%;
-    list-style-type: none;
-    position: relative;
-    top: -20%;
-    width: 80%;
-    z-index: 999;
-  }
-
-  .Navbar-nav-ProjectSelection-element,
-  .Navbar-nav-ProjectSelection-element-a {
-    display: block;
-    width: 100%;
-    @include align-center;
-  }
-
-  .Navbar-nav-ProjectSelection-element {
-    height: 50%;
-  }
-
-  .Navbar-nav-ProjectSelection-element-a {
+  .Navbar-nav-button-link {
     color: $textcolor;
-    font-size: 1.25rem;
-    height: 100%;
-    text-decoration: none;
+  }
+}
+
+.Navbar-dropdown {
+  background-color: rgba(35, 35, 50);
+  border-color: rgba(45, 45, 65, 0.6);
+  border-radius: 4px;
+  border-style: groove;
+  list-style-type: none;
+  position: absolute;
+  z-index: 999;
+
+  .Navbar-nav-button {
+    padding: 1rem 1.8rem;
   }
 
-  .Navbar-nav-ProjectSelection-element-a:hover {
+  & > .Navbar-nav-button:hover {
     background-color: rgb(47, 47, 64);
   }
+
 }

@@ -1,10 +1,13 @@
+@use "./index" as *;
+
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 html, body, #root {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -100,4 +103,8 @@ body {
     radial-gradient(0.6px 0.6px at 3% 55%, rgba(255,255,255,0.5), transparent),
     radial-gradient(0.8px 0.8px at 42% 18%, rgba(255,255,255,0.5), transparent);
   background-repeat: no-repeat;
+}
+
+#root {
+  @include flex-column;
 }

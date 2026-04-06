@@ -1,0 +1,32 @@
+{
+    "Components":
+    {
+        "Card":
+        {
+            "Headers":
+            {
+                "aetheriaTitle": "Our minecraft server",
+                "communityTitle": "Our gaming community",
+                "homeTitle": "Our Ecosystem",
+                "softwareHouseTitle": "Our Software House"
+            },
+            "Pages":
+            {
+                "Home":
+                {
+                    "Line1":"Neo Galaxy was born from a simple idea: bringing people and their passions together under one digital roof.",
+                    "Line2":"We aren't just a group of friends or a team of developers; we are a network where every piece fits together to give you exactly what you’re looking for. Whether you’re here to unwind after a long day of study or work, or you need a technical team to launch your next big idea, you’re in the right place.",
+                    "Line3":"Our ecosystem thrives on the warmth of our Community, where we host events and gaming sessions, and the precision of our Software House, ready to turn your projects into real code.",
+                    "Line4":"Discover our worlds"
+                }
+            }
+        },
+        "Navbar":
+        {
+            "communityText": "Community",
+            "homeText": "Home",
+            "projectsText": "Our Projects",
+            "softwareHouseText": "Software House"
+        }
+    }
+}

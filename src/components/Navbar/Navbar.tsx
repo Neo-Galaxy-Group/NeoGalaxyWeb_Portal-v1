@@ -1,3 +1,4 @@
+import { withTranslation, type WithTranslation } from 'react-i18next';
 import { Component } from "react";
 import "./Navbar.scss";
 
@@ -5,13 +6,14 @@ interface IState {
   isOpen: boolean;
 }
 
-class Navbar extends Component<{}, IState> {
+interface NavbarProps extends WithTranslation {}
 
-  constructor(props: {}) {
+class Navbar extends Component<NavbarProps, IState> {
+  constructor(props: NavbarProps) {
     super(props);
 
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
 
     this.setMenu = this.setMenu.bind(this);
@@ -25,40 +27,46 @@ class Navbar extends Component<{}, IState> {
     this.setMenu(false);
   }
 
-  setMenu(open: boolean)
-  {
+  setMenu(open: boolean) {
     this.setState({ isOpen: open });
   }
 
   render() {
-    const { isOpen } = this.state;
+    const isOpen = this.state.isOpen ? "block" : "none";
+    const { t } = this.props;
 
     return (
       <nav className="Navbar-nav">
         <ul className="Navbar-nav-list">
-          <li className="Navbar-nav-element">
-            <a className="Navbar-nav-element-home" href="/">
-              Home
-            </a>
+          <li className="Navbar-nav-list-element">
+            <div className="Navbar-nav-button">
+              <a className="Navbar-nav-button-link" href="/">
+                {t('Components.Navbar.homeText')}
+              </a>
+            </div> 
           </li>
-          <li className="Navbar-nav-element">
-            <div className="Navbar-nav-element-menu" onMouseEnter={()=>this.setMenu(true)} onMouseLeave={()=>this.setMenu(false)}>
-              I nostri progetti {isOpen ? "↑" : "↓"}
+          <li className="Navbar-nav-list-element">
+            <div className="Navbar-nav-button" onMouseEnter={() => this.setMenu(true)} onMouseLeave={() => this.setMenu(false)}>
+              <p className="Navbar-nav-button-link">
+                {t('Components.Navbar.projectsText')} {isOpen == "block" ? "↑" : "↓"}
+              </p>
             </div>
-            {isOpen && (
-              <ul className="Navbar-nav-ProjectSelection" onMouseEnter={()=>this.setMenu(true)} onMouseLeave={()=>this.setMenu(false)}>
-                <li className="Navbar-nav-ProjectSelection-element">
-                  <a href="/projects/community" className="Navbar-nav-ProjectSelection-element-a">
-                    Community
+            <ul className="Navbar-nav-list Navbar-dropdown" style={{ display: isOpen }} onMouseEnter={() => this.setMenu(true)} onMouseLeave={() => this.setMenu(false)}>
+              <li className="Navbar-nav-list-element">
+                <div className="Navbar-nav-button">
+                  <a href="/projects/community" className="Navbar-nav-button-link">
+                    {t('Components.Navbar.communityText')}
                   </a>
-                </li>
-                <li className="Navbar-nav-ProjectSelection-element">
-                  <a href="/projects/softwarehouse" className="Navbar-nav-ProjectSelection-element-a">
-                    Software House
+                </div>
+              </li>
+              <li className="Navbar-nav-list-element">
+                <div className="Navbar-nav-button">
+                  <a href="/projects/softwarehouse" className="Navbar-nav-button-link">
+                    {t('Components.Navbar.softwareHouseText')}
                   </a>
-                </li>
-              </ul>
-            )}
+                </div>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -66,4 +74,4 @@ class Navbar extends Component<{}, IState> {
   }
 }
 
-export default Navbar;
+export default withTranslation()(Navbar);

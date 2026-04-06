@@ -1,0 +1,8 @@
+@use "./index" as *;
+
+.page-container {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  @include align-center;
+}

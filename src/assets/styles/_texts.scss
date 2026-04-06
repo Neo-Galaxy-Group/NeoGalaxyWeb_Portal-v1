@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Nicholas;
+    src: url("../font/nicholas.ttf");
+}
+
+@font-face {
+    font-family: Typewriter;
+    src: url("../font/typewriter.ttf");
+}
+
+@mixin basetext-color {
+    color: rgb(216, 213, 213);
+}

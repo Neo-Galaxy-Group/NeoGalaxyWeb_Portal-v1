@@ -1,28 +1,30 @@
+import { useTranslation } from "react-i18next";
+
 import "./Home.scss";
 
 function Home() {
+
+  const { t } = useTranslation();
+
   return (
     <div className="Home-container">
+      <br />
       <p className="Home-container-text-intro">
-        Neo Galaxy nasce da un’idea semplice: unire le persone e le loro
-        passioni sotto un unico tetto digitale.
+        {t('Components.Card.Pages.Home.Line1')}
       </p>
-
+      <br />
       <p className="Home-container-text-description">
-        Non siamo solo un gruppo di amici o un team di sviluppatori, ma una rete
-        dove ogni pezzo si incastra per darti quello che cerchi. Che tu sia qui
-        per staccare la spina dopo una giornata di studio o lavoro, o che tu
-        abbia bisogno di un team tecnico per lanciare la tua prossima idea, sei
-        nel posto giusto.
+        {t('Components.Card.Pages.Home.Line2')}
       </p>
-
+      <br />
       <p className="Home-container-text-ecosystem">
-        Il nostro ecosistema si muove tra il calore della Community — dove
-        organizziamo eventi e sessioni di gioco — e la precisione della Software
-        House, pronta a trasformare i tuoi progetti in codice reale.
+        {t('Components.Card.Pages.Home.Line3')}
       </p>
-
-      <p className="Home-container-text-link">Scopri i nostri mondi:</p>
+      <br />
+      <p className="Home-container-text-link">
+        {t('Components.Card.Pages.Home.Line4')}
+      </p>
+      <br />
     </div>
   );
 }

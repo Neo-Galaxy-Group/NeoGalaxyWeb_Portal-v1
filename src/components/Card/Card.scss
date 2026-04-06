@@ -10,10 +10,10 @@ hr {
   border-color: rgba(45, 45, 65, 0.5);
   border-radius: 6px;
   border-style: solid;
-  color: $textcolor;
   justify-items: center;
   text-align: center;
   width: 50%;
+  @include basetext-color;
 }
 
 .Card-div-header {
@@ -34,7 +34,11 @@ hr {
   }
 
   .Card-div-header-text {
-    font-size: 1.8rem;
+    font-family: Nicholas;
+    font-size: 1.2rem;
+    letter-spacing: 0.30rem;
+    text-transform: uppercase;
+    white-space: pre-line;
   }
 
 }

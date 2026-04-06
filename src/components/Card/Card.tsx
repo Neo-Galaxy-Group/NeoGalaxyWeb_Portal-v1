@@ -14,9 +14,7 @@ const Card = ({children, imgSrc, text}: ICard) => {
                 <h1 className="Card-div-header-text">{text}</h1>
             </div>
             <hr />
-            <div className="Card-div-content">
-                {children}
-            </div>
+            {children}
         </div>
     );
 }

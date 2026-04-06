@@ -1,16 +1,18 @@
 @use "../../assets/styles/index" as *;
 
 .Home-container {
+  font-family: Nicholas;
   line-height: 1.6;
-  color: $textcolor;
   padding: 2rem;
   width: 80%;
+  @include basetext-color;
   @include flex-column;
 
   &-text-intro,
   &-text-description,
   &-text-ecosystem,
   &-text-link {
+    font-family: Typewriter;
     font-size: 1.4rem;
   }
 
@@ -19,7 +21,8 @@
   }
 
   &-text-link {
-    letter-spacing: 1px;
+    font-family: Nicholas;
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
   }
 }

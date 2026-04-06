@@ -12,23 +12,26 @@ import CommunityImg from "../assets/img/community_logo.png"
 import HomeImg from "../assets/img/ecosystem_logo.png"
 import SoftwareHouseImg from "../assets/img/softwarehouse_logo.png"
 
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <PageTemplate children={<Home />} imgSrc={HomeImg} text="Il nostro ecosistema" />
+    element: <PageTemplate children={<Home />} imgSrc={HomeImg} textKey="Components.Card.Headers.homeTitle" />
   },
   {
     path: "/projects/aetheriamc",
-    element: <PageTemplate children={<AetheriaMC />} imgSrc={AetheriaMCImg} text="Il nostro server minecraft" />
+    element: <PageTemplate children={<AetheriaMC />} imgSrc={AetheriaMCImg} textKey="Components.Card.Headers.aetheriaTitle" />
   },
   {
     path: "/projects/community",
-    element: <PageTemplate children={<Community />} imgSrc={CommunityImg} text="La nostra gaming community" />
+    element: <PageTemplate children={<Community />} imgSrc={CommunityImg} textKey="Components.Card.Headers.communityTitle" />
   },
   {
     path: "/projects/softwarehouse",
-    element: <PageTemplate children={<SoftwareHouse />} imgSrc={SoftwareHouseImg} text="La nostra Software House" />
+    element: <PageTemplate children={<SoftwareHouse />} imgSrc={SoftwareHouseImg} textKey="Components.Card.Headers.softwareHouseTitle" />
+  },
+  {
+    path: "*",
+    element: <PageTemplate children={<Home />} imgSrc={HomeImg} textKey="Components.Card.Headers.homeTitle" />
   },
 ]);
 

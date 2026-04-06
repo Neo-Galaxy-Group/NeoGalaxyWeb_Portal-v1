@@ -6,19 +6,10 @@ function Footer() {
 
   return (
     <footer>
-      © Copyright {creationYear}{" "}
-      {creationYear !== currentYear && ` - ${currentYear}`}
+      © Copyright {creationYear}{" "}{creationYear !== currentYear && ` - ${currentYear}`}
     </footer>
   );
 }
 
-/*
-<div className="Footer-Top">
-        <div className="Footer-TopLeft">
-        </div>
-        <div className="Footer-TopRight">
-        </div>
-      </div>
-*/
 
 export default Footer;

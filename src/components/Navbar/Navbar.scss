@@ -14,10 +14,13 @@
 }
 
 .Navbar-nav-list-element {
-  color: $textcolor;
+  font-family: Typewriter;
+  justify-items: center;
+  @include basetext-color;
 
   .Navbar-nav-button {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    width: 100%;
 
     &:hover {
       background-color: rgba(45, 45, 65, 0.65);
@@ -27,8 +30,9 @@
   .Navbar-nav-button-link {
     box-sizing: border-box;
     display: block;
-    color: $textcolor;
-    padding: 1.8rem;
+    font-family: Typewriter;
+    padding: 1.5rem;
+    @include basetext-color;
   }
 }
 
@@ -41,12 +45,8 @@
   position: absolute;
   z-index: 999;
 
-  .Navbar-nav-button {
-    padding: 1rem 1.8rem;
-  }
-
   .Navbar-nav-button-link {
-    padding: 0;
+    padding: 1rem 2rem;
   }
 
   & > .Navbar-nav-button:hover {

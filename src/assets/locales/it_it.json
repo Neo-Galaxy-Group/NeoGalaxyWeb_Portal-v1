@@ -1,0 +1,22 @@
+{
+    "Components":
+    {
+        "Card":
+        {
+            "Headers":
+            {
+                "aetheriaTitle": "Il nostro\nserver minecraft",
+                "communityTitle": "La nostra\ngaming community",
+                "homeTitle": "Il nostro ecosistema",
+                "softwareHouseTitle": "La nostra\nSoftware House"
+            }
+        },
+        "Navbar":
+        {
+            "communityText": "Community",
+            "homeText": "Home",
+            "projectsText": "I nostri progetti",
+            "softwareHouseText": "Software House"
+        }
+    }
+}

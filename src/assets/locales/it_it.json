@@ -12,6 +12,13 @@
             },
             "Pages":
             {
+                "Community":
+                {
+                    "Line1":"La Community è il posto dove tutto ha inizio e dove, molto semplicemente, ci si ritrova per stare bene. Non importa se sei un appassionato di gaming o se cerchi solo quattro chiacchiere dopo una giornata intensa: qui troverai sempre qualcuno con cui condividere un momento.",
+                    "Line2":"Organizziamo eventi, ci becchiamo in chiamata per commentare le ultime novità o ci buttiamo in qualche partitina tattica per scaricare la tensione. È uno spazio vivo, nato per abbattere le distanze e trasformare un nickname in un amico. È qui che nascono le nostre avventure virtuali più folli e dove ogni nuova idea trova subito qualcuno pronto a supportarla.",
+                    "Line3":"Lo sai che manchi solo tu?\nEntra a far parte della nostra storia.",
+                    "Link":"Unisciti alla Community"
+                },
                 "Home":
                 {
                     "Line1":"Neo Galaxy nasce da un’idea semplice: unire le persone e le loro passioni sotto un unico tetto digitale.",

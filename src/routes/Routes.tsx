@@ -2,10 +2,10 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import PageTemplate from '../PageTemplate'
 
-import AetheriaMC from "../pages/AetheriaMC/AetheriaMC"
-import Community from "../pages/Community/Community"
-import Home from "../pages/Home/Home"
-import SoftwareHouse from "../pages/SoftwareHouse/SoftwareHouse"
+import AetheriaMC from "../pages/AetheriaMC"
+import Community from "../pages/Community"
+import Home from "../pages/Home"
+import SoftwareHouse from "../pages/SoftwareHouse"
 
 import AetheriaMCImg from "../assets/img/aetheriamc_logo.png"
 import CommunityImg from "../assets/img/community_logo.png"

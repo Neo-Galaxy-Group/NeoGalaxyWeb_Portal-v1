@@ -1,5 +1,8 @@
 import { useTranslation } from "react-i18next";
 
+import CommunityImg from "../../assets/img/community_logo.png";
+import SoftwareHouseImg from "../../assets/img/softwarehouse_logo.png";
+
 import "./Home.scss";
 
 function Home() {
@@ -8,7 +11,6 @@ function Home() {
 
   return (
     <div className="Home-container">
-      <br />
       <p className="Home-container-text-intro">
         {t('Components.Card.Pages.Home.Line1')}
       </p>
@@ -24,7 +26,14 @@ function Home() {
       <p className="Home-container-text-link">
         {t('Components.Card.Pages.Home.Line4')}
       </p>
-      <br />
+      <div className="Home-container-links">
+        <a href="/projects/community" className="Home-container-links-button">
+          {t('Components.Card.Headers.communityTitle')}
+        </a>
+        <a href="/projects/softwarehouse" className="Home-container-links-button">
+          {t('Components.Card.Headers.softwareHouseTitle')}
+        </a>
+      </div>
     </div>
   );
 }

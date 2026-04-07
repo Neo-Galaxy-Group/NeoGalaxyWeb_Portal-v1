@@ -24,7 +24,7 @@ hr {
   justify-items: center;
 
   .Card-div-header-image {
-    width: 8rem;
+    max-width: 8rem;
 
     &:hover {
       animation: pulsazione 1.5s infinite ease-in-out;
@@ -43,9 +43,9 @@ hr {
 
 }
 
-@media (max-width: 550px) {
+@media (max-width: 1100px) {
   .Card-div {
-    width: 90%;
+    width: 80%;
   }
 }
 

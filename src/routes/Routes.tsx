@@ -8,31 +8,26 @@ import Home from "../pages/Home"
 import NotFoundPage from "../pages/404"
 import SoftwareHouse from "../pages/SoftwareHouse"
 
-import AetheriaMCImg from "../assets/img/aetheriamc_logo.png"
-import CommunityImg from "../assets/img/community_logo.png"
-import HomeImg from "../assets/img/ecosystem_logo.png"
-import SoftwareHouseImg from "../assets/img/softwarehouse_logo.png"
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <PageTemplate children={<Home />} imgSrc={HomeImg} textKey="Components.Card.Headers.homeTitle" />
+    element: <PageTemplate children={<Home />} imgSrc="/assets/img/aetheriamc_logo.png" textKey="Components.Card.Headers.homeTitle" />
   },
   {
     path: "/projects/aetheriamc",
-    element: <PageTemplate children={<AetheriaMC />} imgSrc={AetheriaMCImg} textKey="Components.Card.Headers.aetheriaTitle" />
+    element: <PageTemplate children={<AetheriaMC />} imgSrc="/assets/img/aetheriamc_logo.png" textKey="Components.Card.Headers.aetheriaTitle" />
   },
   {
     path: "/projects/community",
-    element: <PageTemplate children={<Community />} imgSrc={CommunityImg} textKey="Components.Card.Headers.communityTitle" />
+    element: <PageTemplate children={<Community />} imgSrc="/assets/img/community_logo.png" textKey="Components.Card.Headers.communityTitle" />
   },
   {
     path: "/projects/softwarehouse",
-    element: <PageTemplate children={<SoftwareHouse />} imgSrc={SoftwareHouseImg} textKey="Components.Card.Headers.softwareHouseTitle" />
+    element: <PageTemplate children={<SoftwareHouse />} imgSrc="/assets/img/softwarehouse_logo.png" textKey="Components.Card.Headers.softwareHouseTitle" />
   },
   {
     path: "*",
-    element: <PageTemplate children={<NotFoundPage />} imgSrc={HomeImg} textKey="Components.Card.Headers.404Title" />
+    element: <PageTemplate children={<NotFoundPage />} imgSrc="/assets/img/aetheriamc_logo.png" textKey="Components.Card.Headers.404Title" />
   },
 ]);
 

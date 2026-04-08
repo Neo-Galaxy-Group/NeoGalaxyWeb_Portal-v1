@@ -20,7 +20,10 @@ function Home() {
       <p className="Pages-container-textlink">
         {t('Components.Card.Pages.Home.Line4')}
       </p>
-      <div className="Pages-container-links Pages-container-links-two">
+      <div className="Pages-container-links">
+        <a href="/pages/story" className="Pages-container-links-button">
+          {t('Components.Card.Headers.storyTitle')}
+        </a>
         <a href="/projects/community" className="Pages-container-links-button">
           {t('Components.Card.Headers.communityTitle')}
         </a>

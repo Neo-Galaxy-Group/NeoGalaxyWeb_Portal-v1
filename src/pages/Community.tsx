@@ -17,9 +17,18 @@ function Community() {
       <p className="Pages-container-text">
         {t('Components.Card.Pages.Community.Line3')}
       </p>
-      <div className="Pages-container-links Pages-container-links-one">
-        <a href="/projects/community" className="Pages-container-links-button">
-          {t('Components.Card.Pages.Community.Link')}
+      <p className="Pages-container-text">
+        {t('Components.Card.Pages.Community.Line4')}
+      </p>
+      <div className="Pages-container-links">
+        <a href="https://community.neogalaxy.eu" className="Pages-container-links-button">
+          {t('Components.Card.Pages.Community.Link1')}
+        </a>
+        <a href="https://discord.gg/neogalaxy" className="Pages-container-links-button">
+          {t('Components.Card.Pages.Community.Link2')}
+        </a>
+        <a href="/projects/aetheriamc" className="Pages-container-links-button">
+          {t('Components.Card.Pages.Community.Link3')}
         </a>
       </div>
     </div>

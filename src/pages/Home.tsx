@@ -9,16 +9,16 @@ function Home() {
   return (
     <div className="Pages-container">
       <p className="Pages-container-text">
-        {t('Components.Card.Pages.Home.Line1')}
+        {t('Components.Card.Pages.Home.Line1', { joinArrays: ' ' })}
       </p>
       <p className="Pages-container-text">
-        {t('Components.Card.Pages.Home.Line2')}
+        {t('Components.Card.Pages.Home.Line2' , { joinArrays: ' ' })}
       </p>
       <p className="Pages-container-text">
-        {t('Components.Card.Pages.Home.Line3')}
+        {t('Components.Card.Pages.Home.Line3', { joinArrays: ' ' })}
       </p>
       <p className="Pages-container-textlink">
-        {t('Components.Card.Pages.Home.Line4')}
+        {t('Components.Card.Pages.Home.Line4', { joinArrays: ' ' })}
       </p>
       <div className="Pages-container-links">
         <a href="/pages/story" className="Pages-container-links-button">

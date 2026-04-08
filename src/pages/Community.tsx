@@ -9,16 +9,16 @@ function Community() {
   return (
     <div className="Pages-container">
       <p className="Pages-container-text">
-        {t('Components.Card.Pages.Community.Line1')}
+        {t('Components.Card.Pages.Community.Line1', { joinArrays: ' ' })}
       </p>
       <p className="Pages-container-text">
-        {t('Components.Card.Pages.Community.Line2')}
+        {t('Components.Card.Pages.Community.Line2', { joinArrays: ' ' })}
       </p>
       <p className="Pages-container-text">
-        {t('Components.Card.Pages.Community.Line3')}
+        {t('Components.Card.Pages.Community.Line3', { joinArrays: ' ' })}
       </p>
       <p className="Pages-container-text">
-        {t('Components.Card.Pages.Community.Line4')}
+        {t('Components.Card.Pages.Community.Line4', { joinArrays: ' ' })}
       </p>
       <div className="Pages-container-links">
         <a href="https://community.neogalaxy.eu" className="Pages-container-links-button">

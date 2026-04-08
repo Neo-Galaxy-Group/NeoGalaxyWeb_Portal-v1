@@ -5,6 +5,7 @@ import PageTemplate from '../PageTemplate'
 import AetheriaMC from "../pages/AetheriaMC"
 import Community from "../pages/Community"
 import Home from "../pages/Home"
+import NotFoundPage from "../pages/404"
 import SoftwareHouse from "../pages/SoftwareHouse"
 
 import AetheriaMCImg from "../assets/img/aetheriamc_logo.png"
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <PageTemplate children={<Home />} imgSrc={HomeImg} textKey="Components.Card.Headers.homeTitle" />
+    element: <PageTemplate children={<NotFoundPage />} imgSrc={HomeImg} textKey="Components.Card.Headers.404Title" />
   },
 ]);
 

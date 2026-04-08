@@ -5,6 +5,7 @@
         {
             "Headers":
             {
+                "404Title": "Page Not Found",
                 "aetheriaTitle": "Our Minecraft Server",
                 "communityTitle": "Our Gaming Community",
                 "homeTitle": "Our ecosystem",
@@ -13,6 +14,11 @@
             },
             "Pages":
             {
+                "404":
+                {
+                    "Line1":"404",
+                    "Line2":"The page you are looking for could not be found.\nPlease check the URL or return to the home page to explore our portal."
+                },
                 "Community":
                 {
                     "Line1":"Community is where it all begins—a place where, quite simply, people come together to have a good time. It doesn’t matter if you’re a gaming enthusiast or just looking for a chat after a long day: here, you’ll always find someone to share a moment with.",

@@ -5,6 +5,7 @@
         {
             "Headers":
             {
+                "404Title": "Pagina Non Trovata",
                 "aetheriaTitle": "Il nostro\nServer Minecraft",
                 "communityTitle": "La nostra\nGaming Community",
                 "homeTitle": "Il nostro ecosistema",
@@ -13,6 +14,11 @@
             },
             "Pages":
             {
+                "404":
+                {
+                    "Line1":"404",
+                    "Line2":"Assicurati di aver digitato correttamente l'indirizzo.\nTorna alla Home per esplorare il nostro portale web."
+                },
                 "Community":
                 {
                     "Line1":"La Community è il posto dove tutto ha inizio e dove, molto semplicemente, ci si ritrova per stare bene. Non importa se sei un appassionato di gaming o se cerchi solo quattro chiacchiere dopo una giornata intensa: qui troverai sempre qualcuno con cui condividere un momento.",

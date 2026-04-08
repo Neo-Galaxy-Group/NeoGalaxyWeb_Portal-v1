@@ -18,6 +18,4 @@ function Page404() {
   );
 }
 
-// [ 👥 Di più sulla Community ] [ 🛠️ Di più sulla Software House ]
-
 export default Page404;

@@ -21,7 +21,7 @@ function Home() {
         {t('Components.Card.Pages.Home.Line4', { joinArrays: ' ' })}
       </p>
       <div className="Pages-container-links">
-        <a href="/pages/story" className="Pages-container-links-button">
+        <a href="/pages/story" className="Pages-container-links-button" style={{ display:"none" }}>
           {t('Components.Card.Headers.storyTitle')}
         </a>
         <a href="/projects/community" className="Pages-container-links-button">

@@ -19,11 +19,11 @@ const PageTemplate = ({children, imgSrc, textKey}: IPageTemplate) => {
     return(
         <>
             <Header />
-            <div className="page-container">
+            <main className="page-container">
                 <Card imgSrc={imgSrc} text={t(textKey)}>
                     {children}
                 </Card>
-            </div>
+            </main>
             <Footer />
         </>
     )

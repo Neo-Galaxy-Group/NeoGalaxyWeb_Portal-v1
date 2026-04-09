@@ -7,15 +7,15 @@
 
 .Navbar-nav-list {
   display: grid;
+  grid-auto-columns: 1fr;
   grid-auto-flow: column;
-  grid-template-columns: repeat(2, 1fr);
   list-style-type: none;
-  text-align: center;
 }
 
 .Navbar-nav-list-element {
   font-family: Typewriter;
   justify-items: center;
+  text-align: center;
   @include basetext-color;
 
   .Navbar-nav-button {
@@ -53,4 +53,14 @@
     background-color: rgb(47, 47, 64);
   }
 
+}
+
+@media (max-width: 500px) {
+  .Navbar-nav-list {
+    width: 60%;
+  }
+
+  .Navbar-nav-button-link {
+    text-align: center;
+  }
 }

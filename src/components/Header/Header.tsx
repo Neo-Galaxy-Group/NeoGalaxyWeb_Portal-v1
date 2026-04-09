@@ -1,14 +1,14 @@
-import Navbar from "../Navbar/Navbar"
+import Navbar from "../Navbar/Navbar";
 
-import "./Header.scss"
+import "./Header.scss";
 
-function Header()
-{
-    return (
-        <header>
-            <Navbar />
-        </header>
-    )
+function Header() {
+
+  return (
+    <header>
+      <Navbar />
+    </header>
+  );
 }
 
 export default Header;

@@ -1,5 +1,14 @@
 @use "./index" as *;
 
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(211, 208, 218);
+  border-radius: 3px;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -1,7 +1,7 @@
 @use "./index" as *;
 
 .page-container {
-  display: block;
+  display: flex;
   margin: 2rem 0;
   width: 100%;
   @include align-center;

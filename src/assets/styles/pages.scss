@@ -31,6 +31,7 @@
 
     .Pages-container-links-button {
       align-content: center;
+      align-self: stretch;
       background: linear-gradient(135deg, #4b3b61 0%, #2d233a 100%);
       border: 1px solid rgba(216, 213, 213, 0.15);
       border-radius: 5rem;
@@ -40,8 +41,6 @@
       font-family: Typewriter;
       font-size: 1rem;
       margin: 1rem;
-      min-height: stretch;
-      min-width: stretch;
       @include basetext-color;
 
       &:hover {
@@ -55,7 +54,7 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .Pages-container {
     width: 90%;
 
@@ -66,7 +65,6 @@
       grid-template-columns: unset;
 
       .Pages-container-links-button {
-        min-height: unset;
         font-size: 0.8rem;
       }
     }

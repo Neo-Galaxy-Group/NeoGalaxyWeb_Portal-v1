@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/projects/aetheriamc",
-    element: <PageTemplate children={<AetheriaMC />} imgSrc="/assets/img/ecosystem_logo.png" textKey="Components.Card.Headers.aetheriaTitle" />
+    element: <PageTemplate children={<AetheriaMC />} imgSrc="/assets/img/aetheriamc_logo.png" textKey="Components.Card.Headers.aetheriaTitle" />
   },
   {
     path: "/projects/community",

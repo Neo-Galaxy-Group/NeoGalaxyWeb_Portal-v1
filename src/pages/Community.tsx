@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import "../assets/styles/Pages.scss";
+import "../assets/styles/pages.scss";
 
 function Community() {
   
